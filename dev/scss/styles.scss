@@ -1,0 +1,42 @@
+$blackColor: rgb(3, 3, 3);
+$whiteColor: #fff;
+$greyColor: #e8e8e8;
+$primaryColor: #063a4e;
+$fonColor:lightyellow;
+$secondaryColor: #d9ab4d;
+$freeSpace: 15px;
+$headerHeight: 49px;
+$footerHeight: 49px;
+$borderRadius: 2px;
+$successColor:lightgreen;
+$errorColor: rgb(197, 70, 11);
+
+
+@import 'reset';
+@import 'grid';
+@import 'typography';
+@import 'forms';
+@import '../../node_modules/medium-editor/dist/css/medium-editor';  //не пишем в конце css, т к он каждый раз будет подключать, а не вставит внутрь нашего файла
+@import '../../node_modules/medium-editor/dist/css/themes/default';
+
+html {   
+  display: flex;
+  flex-direction: column;    //чтобы растягивалось на всю
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;   //чтобы растягивалось на всю
+  flex: auto;
+  color: $blackColor;
+  background-color: lighten($fonColor, 4); //серый светлее на 7 степеней
+  padding-top: $headerHeight + $freeSpace;
+
+}
+
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'components/report';
+@import 'components/auth';

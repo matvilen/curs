@@ -1,0 +1,49 @@
+{
+  "name": "curs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Elena Matvienko <matvilenka13@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "gulp",
+    "gulpnodemon": "gulp",
+    "nodemon": "nodemon app.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-node": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "nodemon": "^1.19.4"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "faker": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "jquery": "^3.4.1",
+    "medium-editor": "^5.23.3",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
+    "mongoose-url-slugs": "^1.0.2",
+    "static-asset": "^0.6.0",
+    "transliter": "^2.2.1",
+    "turndown": "^5.0.3"
+  }
+}

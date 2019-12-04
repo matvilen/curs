@@ -1,0 +1,45 @@
+<% include layout/header.ejs %>
+
+<div class="main">
+    <div class="container">
+        <div class="content">
+                <% for (var i = 0; i < reports.length; i++) { %>   <!--сюда приходит массив of reports-->
+                    <div class="report">
+                                    <div class="top">
+                                        <h2><%=reports[i].title %></h2>
+                                    </div>
+                                    <div class="body">
+                                        <p><%=reports[i].body %></p>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="author">
+                                            Автор: <a href="/">Avtor</a>
+                                        </div>
+                                        <a href="/">Comments</a>
+                                    </div>
+                                </div>
+
+
+                    <% } %>
+            
+                    <div class="pagination">
+                        <% if (current > 2) { %>
+                            <a class="new" href="/archive/<%= Number(current) - 1%>">← К новым записям </a>
+                        <% } %>
+
+                        <% if (current == 2) { %>
+                            <a class="new" href="/">← На главную </a>
+                        <% } %>
+
+                        <% if (pages > 0 && current < pages){ %>
+                            <a class="old" href="/archive/<%= Number(current) + 1%>">К старым записям → </a>
+                        <% } %>
+                    </div>
+   
+                 
+        </div>
+        <% include layout/sidebar.ejs %>
+    </div>
+</div>
+                                       
+ <% include layout/footer.ejs %>
